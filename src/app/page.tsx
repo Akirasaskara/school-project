@@ -2,16 +2,19 @@
 import ShinyText from "@/components/shinytext";
 import ColorBends from "@/components/ColorBends";
 import RotatingText from "@/components/RotatingText";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import TiltedCard from "@/components/TiltedCard";
 import SkillsSection from "@/components/skills";
+import Footer from "@/components/Footer";
+import Projects from "@/components/Projects";
+
+
 
 export default function Home() {
   return (
     <>
       <div className="bg-black">
-        <div className=" relative min-h-screen items-center justify-center font-poppins px-4 sm:px-6 lg:px-8 flex">
+        <div className=" relative min-h-screen items-center justify-center font-poppins px-6 sm:px-8 lg:px-12 flex">
           <div className="absolute inset-0 z-0 w-full ">
             <ColorBends
               rotation={360}
@@ -29,20 +32,20 @@ export default function Home() {
           </div>
           <Navbar />
 
-          <div className="relative z-10 w-full max-w-6xl">
-            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mt-40">
+          <div className="relative z-10 w-full max-w-7xl">
+            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 mt-48">
               <div className="shrink-0">
                 <div className="relative">
                   <TiltedCard
                     imageSrc="/gue.jpeg"
                     altText="Gue ganteng"
                     captionText="Akira"
-                    containerHeight="600px"
-                    containerWidth="350px"
-                    imageHeight="600px"
-                    imageWidth="350px"
-                    rotateAmplitude={10}
-                    scaleOnHover={1.2}
+                    containerHeight="720px"
+                    containerWidth="420px"
+                    imageHeight="720px"
+                    imageWidth="420px"
+                    rotateAmplitude={12}
+                    scaleOnHover={1.25}
                     showMobileWarning={false}
                     showTooltip={true}
                     displayOverlayContent={true}
@@ -53,7 +56,7 @@ export default function Home() {
 
               <div className="flex-1 text-left">
                 <div className="mb-6">
-                  <h1 className="text-5xl sm:text-6xl font-bold mb-2 dark:text-zinc-100">
+                  <h1 className="text-6xl sm:text-7xl font-bold mb-2 dark:text-zinc-100">
                     <ShinyText
                       text="Hi, I'm Akira"
                       speed={3.6}
@@ -66,7 +69,7 @@ export default function Home() {
                       pauseOnHover={false}
                     />
                   </h1>
-                  <p className="flex items-center text-3xl font-semibold text-zinc-200 dark:text-zinc-300 ">
+                  <p className="flex items-center text-4xl font-semibold text-zinc-200 dark:text-zinc-300 ">
                     Creative
                     <RotatingText
                       texts={["Developer", "Innovator", "Solver"]}
@@ -87,7 +90,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className=" font-semibold space-y-4 text-zinc-200 dark:text-zinc-300 text-lg leading-relaxed">
+                <div className=" font-semibold space-y-5 text-zinc-200 dark:text-zinc-300 text-xl leading-loose">
                   <p>
                     Welcome to my digital space! I'm a passionate developer who
                     loves creating beautiful and functional web experiences.
@@ -101,17 +104,19 @@ export default function Home() {
                     push boundaries and create something remarkable.
                   </p>
                 </div>
-                <div className="mt-8 flex gap-4">
-                  <button className="px-6 py-3 bg-linear-to-r from-white-500 to-orange-900 text-white rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
+                <div className="mt-10 flex gap-5">
+                  <button className="px-8 py-4 text-lg bg-linear-to-r from-white-500 to-orange-900 text-white rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300">
                     View Projects
                   </button>
-                  <button className="px-6 py-3 bg-linear-to-r from-white-500 to-orange-900 text-white rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
+                  <button className="px-8 py-4 text-lg bg-linear-to-r from-white-500 to-orange-900 text-white rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300">
                     Contact Me
                   </button>
                 </div>
               </div>
             </div>
           <SkillsSection />
+          <Projects />
+          <Footer />
           </div>
         </div>
         <div>

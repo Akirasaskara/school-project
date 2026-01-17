@@ -1,31 +1,32 @@
 "use client";
 
 import Link from "next/link";
-import { MapPin, Phone, Mail } from "lucide-react";
+import React from "react";
+import { Phone, Mail } from "lucide-react";
 
 const quickLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/skill", label: "Skills" },
-  { href: "/project", label: "Projects" },
-  { href: "/Contact", label: "Help" },
+  { href: "#skills", label: "Skills" },
+  { href: "/garapan", label: "Projects" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-transparent w-full">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 mt-1 md:gap-12 items-start text-center md:text-left">
+    <footer className="bg-transparent backdrop-blur-sm w-full mt-auto border-t border-gray-800">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start text-center md:text-left">
+          {/* Quick Links */}
           <div>
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-4">
+            <h3 className="text-2xl font-semibold text-white mb-6">
               Quick Links
             </h3>
-            <ul className="space-y-2 sm:space-y-1">
+            <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 text-base lg:text-lg hover:text-[#4DD0E1] transition-colors duration-300"
+                    className="text-gray-300 text-lg hover:text-orange-400 transition-colors duration-300 inline-block"
                   >
                     {link.label}
                   </Link>
@@ -34,30 +35,38 @@ export default function Footer() {
             </ul>
           </div>
 
+          
           <div>
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-4">
+            <h3 className="text-2xl font-semibold text-white mb-6">
               Contact Info
             </h3>
             <div className="space-y-4">
-              <div className="flex items-center justify-center sm:justify-start space-x-3">
-                <Phone className="h-5 w-5 md:h-6 md:w-6 text-white shrink-0" />
-                <p className="text-gray-300 text-base lg:text-lg">
+              <div className="flex items-center justify-center md:justify-start space-x-3">
+                <Phone className="h-5 w-5 text-orange-400 shrink-0" />
+                <a 
+                  href="tel:+6288102616093" 
+                  className="text-gray-300 text-lg hover:text-orange-400 transition-colors"
+                >
                   +62 881-0261-60932
-                </p>
+                </a>
               </div>
-              <div className="flex items-center justify-center sm:justify-start space-x-3">
-                <Mail className="h-5 w-5 md:h-6 md:w-6 text-white shrink-0" />
-                <p className="text-gray-300 text-base lg:text-lg">
+              <div className="flex items-center justify-center md:justify-start space-x-3">
+                <Mail className="h-5 w-5 text-orange-400 shrink-0" />
+                <a 
+                  href="mailto:akirahartono2@gmail.com" 
+                  className="text-gray-300 text-lg hover:text-orange-400 transition-colors"
+                >
                   akirahartono2@gmail.com
-                </p>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-700/50 mt-10 lg:mt-12 pt-6 lg:pt-8">
-          <p className="text-center text-gray-400 text-sm md:text-base">
-            © 2025 Akira Saskara Hartono. All rights reserved.
+        
+        <div className="border-t border-gray-800 mt-10 pt-6">
+          <p className="text-center text-gray-400 text-sm">
+            © {new Date().getFullYear()} Akira Saskara Hartono. All rights reserved.
           </p>
         </div>
       </div>

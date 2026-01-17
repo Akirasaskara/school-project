@@ -39,7 +39,7 @@ const projects: Project[] = [
   }
 ];
 
-export default function Project() {
+export default function Garapan() {
   return (
     <div className="pt-20 pb-32">
       {/* Hero */}

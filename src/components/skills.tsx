@@ -45,7 +45,8 @@ const skills: skill[] = [
       },
       {
         name: "JavaScript",
-        image: techStack.find((skill) => skill.skillName === "JavaScript")?.iconUrl,
+        image: techStack.find((skill) => skill.skillName === "JavaScript")
+          ?.iconUrl,
       },
     ],
   },
@@ -77,11 +78,11 @@ export default function SkillsSection() {
     <div className="relative min-h-screen items-center justify-center font-poppins px-4 sm:px-6 lg:px-8 flex">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-13">
-          <h2 className="text-4xl font-bold text-white dark:text-zinc-100">
+          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-4">
             Skills
           </h2>
           <div className="w-24 h-1 bg-transparent from-white-500 to-orange-900 mx-auto mb-6"></div>
-          <p className="text-zinc-300 text-lg max-w-2xl mx-auto">
+          <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
             A comprehensive overview of my technical expertise and the tools I
             use to bring ideas to life
           </p>
@@ -105,7 +106,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Skills Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center">
           {skills[activeCategory].items.map((skill, index) => (
             <div
               key={index}
@@ -113,11 +114,11 @@ export default function SkillsSection() {
             >
               {skill.image ? (
                 <Image
-                  className="mx-auto mb-4 rounded-md"
+                  className="mx-auto mb-3 rounded-md"
                   src={skill.image}
                   alt={skill.name}
-                    width={100}
-                    height={100}
+                  width={100}
+                  height={100}
                 />
               ) : (
                 <div className="mx-auto mb-4 rounded-md w-20 h-20"></div>

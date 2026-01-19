@@ -40,6 +40,11 @@ const skills: skill[] = [
         image: techStack.find((skill) => skill.skillName === "NestJS")?.iconUrl,
       },
       {
+        name: "TypeScript",
+        image: techStack.find((skill) => skill.skillName === "TypeScript")
+          ?.iconUrl,
+      },
+      {
         name: "MySQL",
         image: techStack.find((skill) => skill.skillName === "MySQL")?.iconUrl,
       },

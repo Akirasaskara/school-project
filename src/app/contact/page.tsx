@@ -28,21 +28,21 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center p-4">
-      <div className="w-full max-w-3xl flex flex-col items-center justify-center space-y-12 text-center pt-20">
+    <div className="min-h-screen w-full flex items-center justify-center p-4 pt-24 md:pt-32 pb-20">
+      <div className="w-full max-w-3xl flex flex-col items-center justify-center space-y-8 md:space-y-12 text-center">
         
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-center space-y-8"
+          className="flex flex-col items-center space-y-6 md:space-y-8"
         >
           {/* Header Section */}
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h1 className="text-6xl md:text-8xl font-bold font-poppins text-white tracking-tight">
+          <motion.div variants={itemVariants} className="space-y-3 md:space-y-4">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold font-poppins text-white tracking-tight">
               Let's <span className="text-[#e77213]">Connect</span>
             </h1>
-            <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-400 text-base md:text-xl max-w-2xl mx-auto leading-relaxed px-4">
               Have a project in mind or just want to chat? I'm always open to
               discussing new opportunities and creative ideas.
             </p>
@@ -54,14 +54,14 @@ export default function ContactPage() {
               <div className="p-3 bg-white/5 rounded-full backdrop-blur-sm group-hover:bg-[#e77213]/10 transition-colors duration-300">
                 <Mail className="w-6 h-6" />
               </div>
-              <span className="text-lg font-medium">akirahartono2@gmail.com</span>
+              <span className="text-lg font-medium font-poppins">akirahartono2@gmail.com</span>
             </div>
 
             <div className="flex items-center gap-3 text-gray-200 group hover:text-[#e77213] transition-colors duration-300">
               <div className="p-3 bg-white/5 rounded-full backdrop-blur-sm group-hover:bg-[#e77213]/10 transition-colors duration-300">
                 <MapPin className="w-6 h-6" />
               </div>
-              <span className="text-lg font-medium">Malang, Indonesia</span>
+              <span className="text-lg font-medium font-poppins~`">Malang, Indonesia</span>
             </div>
           </motion.div>
 

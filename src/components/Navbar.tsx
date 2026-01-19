@@ -14,12 +14,12 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="fixed top-0 left-0 w-full font-sans px-6 py-4 z-50 bg-black/20 backdrop-blur-sm">
+    <div className="fixed top-0 left-0 w-full font-sans px-4 py-3 md:px-6 md:py-4 z-50 bg-black/20 backdrop-blur-sm">
       <nav className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <div>
           <Link href="/">
-            <h1 className="text-3xl font-medium text-white cursor-pointer hover:text-gray-300 transition-colors">
+            <h1 className="text-2xl md:text-3xl font-medium text-white cursor-pointer hover:text-gray-300 transition-colors">
               Akira
             </h1>
           </Link>

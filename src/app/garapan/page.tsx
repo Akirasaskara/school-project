@@ -1,5 +1,6 @@
 'use client';
 
+
 import { projectKu } from "@/lib/data";
 import { motion } from "motion/react";
 
@@ -41,19 +42,19 @@ const projects: Project[] = [
 
 export default function Garapan() {
   return (
-    <div className="pt-20 pb-32">
+    <div className="pt-24 pb-32">
       {/* Hero */}
-      <section className="py-16 px-4 text-center">
+      <section className="py-12 md:py-16 px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-            My Project
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+            My Projects
           </h1>
-          <p className="text-zinc-300 text-lg md:text-xl">
+          <p className="text-zinc-300 text-base md:text-xl">
             Explore my portfolio of innovative digital design solutions
           </p>
         </motion.div>
@@ -85,10 +86,10 @@ export default function Garapan() {
 
                   
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-xl font-semibold mb-2 text-black">
+                    <h3 className="text-xl font-semibold mb-2 text-white">
                       {project.projectName}
                     </h3>
-                    <p className="text-black text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                    <p className="text-zinc-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                       {project.description || "No description available"}
                     </p>
                   </div>
